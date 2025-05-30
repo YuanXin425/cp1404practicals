@@ -42,6 +42,8 @@ def print_result(score):
 def show_stars(score):
     print("*" * int(round(score)))
 
+main()
+
 
 
 
