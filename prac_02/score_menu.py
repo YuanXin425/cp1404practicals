@@ -23,7 +23,7 @@ def main():
 
     print("Farewell")
 
-def get_score():
+def get_marks():
     score = float(input("Enter score: "))
     while score < 0 or score > 100:
         print("Invalid score")
