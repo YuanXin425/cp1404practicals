@@ -12,7 +12,7 @@ def main():
         elif choice == "Q":
             print("Farewell")
         else:
-            print("Invalid choice. Please reselect again.")
+            print("Invalid choice. Please select one of the options provided in the menu.")
 
         menu()
         choice = input("Enter choice: ")
