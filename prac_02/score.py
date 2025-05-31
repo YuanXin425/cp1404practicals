@@ -6,8 +6,6 @@ def main():
 
     if score < 0 or score > 100:
         print("Invalid score")
-        score = float(input("Enter score: "))
-
     else:
         if score >= 90:
             result = "Excellent"
@@ -22,8 +20,6 @@ def main():
 
     if random_score < 0 or random_score > 100:
         print("Invalid score")
-        score = float(input("Enter score: "))
-
     else:
         if random_score >= 90:
             result = "Excellent"
