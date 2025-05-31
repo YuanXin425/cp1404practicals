@@ -4,8 +4,10 @@ def main():
     """Ask user for their score, print results based on their score,
     and then show results for a random score."""
     result = ""
+    # Get user's input
     score = float(input("Enter score: "))
 
+    # Determine the result on user's input
     if score < 0 or score > 100:
         print("Invalid score")
     else:
@@ -18,8 +20,10 @@ def main():
 
     print(result)
 
+    # Create random score
     random_score = random.randint(0, 100)
 
+    # Determine result based on random score
     if random_score < 0 or random_score > 100:
         print("Invalid score")
     else:
