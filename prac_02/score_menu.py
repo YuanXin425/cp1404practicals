@@ -1,7 +1,7 @@
 def main():
-    score = 0
+    score = get_score()
     menu()
-    choice = input("Enter choice: ")
+    choice = input("Enter choice: ").upper()
     while choice != "Q":
         if choice == "G":
             score = get_score()
