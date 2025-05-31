@@ -1,10 +1,10 @@
 def main():
-    score = get_score()
+    score = check_score() # Get a valid score before entering the menu loop.
     menu()
     choice = input("Enter choice: ").upper()
     while choice != "Q":
         if choice == "G":
-            score = get_score()
+            score = check_score()
         elif choice == "P":
             print_result(score)
         elif choice == "S":
@@ -27,7 +27,7 @@ def menu():
     print("(S)how stars")
     print("(Q)uit")
 
-def get_score():
+def check_score():
     """Get a valid score(must be 0-100 inclusive)."""
     score = float(input("Enter score: "))
     while score < 0 or score > 100:
