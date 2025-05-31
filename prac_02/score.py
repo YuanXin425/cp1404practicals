@@ -1,6 +1,8 @@
 import random
 
 def main():
+    """Ask user for their score, print results based on their score,
+    and then show results for a random score."""
     result = ""
     score = float(input("Enter score: "))
 
