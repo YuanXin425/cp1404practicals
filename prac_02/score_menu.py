@@ -1,35 +1,37 @@
-from prac_02.score import get_score
-
-
 def main():
-    print("Menu:")
-    print("(G)et a valid score(must be 0-100 inclusive)")
-    print("(P)rint result")
-    print("(S)how stars")
-    print("(Q)uit")
+    score = 0
+    menu()
     choice = input("Enter choice: ")
-    while choice != "Quit":
+    while choice != "Q":
         if choice == "G":
-            score = get_score()
+            score = get_valid_score()
         elif choice == "P":
             print_result(score)
         elif choice == "S":
             show_stars(score)
         elif choice == "Q":
             print("Farewell")
-
         else:
             print("Invalid choice. Please reselect again.")
 
+        menu()
+        choice = input("Enter choice: ")
+
     print("Farewell")
 
-def get_marks():
+def menu():
+    print("Menu:")
+    print("(G)et a valid score(must be 0-100 inclusive)")
+    print("(P)rint result")
+    print("(S)how stars")
+    print("(Q)uit")
+
+def get_valid_score():
     score = float(input("Enter score: "))
     while score < 0 or score > 100:
         print("Invalid score")
         score = float(input("Enter score: "))
-
-    print(score)
+    return score
 
 def print_result(score):
     if score >= 90:
