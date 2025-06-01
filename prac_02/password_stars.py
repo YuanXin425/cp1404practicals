@@ -1,6 +1,7 @@
 def main():
+    """Get user's password and print asterisks."""
     password = get_password()
-    print_stars(password)
+    print_asterisks(password)
 
 def get_password():
     """Get a valid password from the user."""
@@ -10,8 +11,8 @@ def get_password():
         password = input("Enter password: ")
     return password
 
-def print_stars(password):
-    """Print stars equal to the length of the password."""
+def print_asterisks(password):
+    """Print asterisks equal to the number of characters from the password."""
     print("*" * len(password))
 
 main()
