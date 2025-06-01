@@ -1,39 +1,26 @@
 import random
 
 def main():
-    """Ask user for their score, print results based on their score,
-    and then show results for a random score."""
-    result = ""
-    # Get user's input
+    """Get user's score and print the result based on user's score."""
     score = float(input("Enter score: "))
-
-    # Determine the result on user's input
-    if score < 0 or score > 100:
-        print("Invalid score")
-    else:
-        if score >= 90:
-            result = "Excellent"
-        elif score >= 50:
-            result = "Passable"
-        else:
-            result = "Bad"
-
-    print(result)
+    print(determine_result(score))
 
     # Create random score
-    random_score = random.randint(0, 100)
+    random_score = random.uniform(0, 100)
+    # Determine the result based on random score
+    random_result = determine_result(random_score)
+    print(f"Random score: {random_score:.2f}, Result: {random_result}")
 
-    # Determine result based on random score
-    if random_score < 0 or random_score > 100:
-        print("Invalid score")
+def determine_result(score):
+    """Determine the result based on user's score input."""
+    if score < 0 or score > 100:
+        return "Invalid score"
     else:
-        if random_score >= 90:
-            result = "Excellent"
-        elif random_score >= 50:
-            result = "Passable"
+        if score >= 90:
+            return "Excellent"
+        elif score >= 50:
+            return "Passable"
         else:
-            result = "Bad"
-
-    print(f"Random score: {random_score}, Result: {result}")
+            return "Bad"
 
 main()
