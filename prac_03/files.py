@@ -24,6 +24,7 @@ with open("numbers.txt", "r") as numbers_file:
 
     print(total)
 
+# Close the file
 numbers_file.close()
 
 
