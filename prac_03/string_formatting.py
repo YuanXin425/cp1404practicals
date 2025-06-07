@@ -38,7 +38,7 @@ year = 1922
 guitar = "Gibson L-5 CES"
 price = 16036
 
-print(f"{year} {guitar} for about ${price:,}! ")
+print(f"{year} {guitar} for about ${price:,}!")
 
 # TODO: Using a for loop with the range function and f-string formatting,
 # produce the following right-aligned output (DO NOT use a list):
