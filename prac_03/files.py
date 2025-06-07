@@ -25,9 +25,7 @@ with open("numbers.txt", "r") as numbers_file:
     for i in range(2):
         number = numbers_file.readline()
         total += int(number)
-    print(total)
-# Close the file
-numbers_file.close()
+print(total)
 
 
 # 4.
@@ -36,9 +34,7 @@ with open("numbers.txt", "r") as numbers_file:
     # Read all the numbers and adds them together
     for line in numbers_file:
         total = total + int(line)
-    print(total)
-# Close the file
-numbers_file.close()
+print(total)
 
 
 
