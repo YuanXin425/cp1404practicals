@@ -24,7 +24,7 @@ number_of_days = 0
 price = INITIAL_PRICE
 
 # Write the starting price
-print(f"Starting price: ${price:,.2f}")
+print(f"Starting price: ${price:,.2f}", file=out_file)
 
 while MIN_PRICE <= price <= MAX_PRICE:
     number_of_days += 1
