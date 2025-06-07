@@ -10,13 +10,12 @@ name_file.close()
 
 # 2.
 # Open a file called name.txt
-name_file = open('name.txt')
-# Get user's name and write it to the file
-name = input("Enter name: ")
-name_file.readline().strip()
-print("Hi", name, "!")
+name_file = open('name.txt', 'r')
+# Read the name in the file
+name_file.read().strip()
 # Close the file
 name_file.close()
+print(f"Hi {name}!")
 
 
 # 3.
