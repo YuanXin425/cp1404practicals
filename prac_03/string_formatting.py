@@ -54,7 +54,6 @@ print(f"{year} {guitar} for about ${price:,}!")
 # 2 ^ 9 is  512
 # 2 ^10 is 1024
 
-x = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
-
-for y, x in enumerate(x, 0):
-    print(f"2 ^ {y} is {x:10}")
+for i in range(11):
+    x = 2 ** i
+    print(f"2 ^ {i} is {x:4}")
