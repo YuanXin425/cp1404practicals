@@ -56,4 +56,4 @@ print(f"{year} {guitar} for about ${price:,}!")
 
 for i in range(11):
     x = 2 ** i
-    print(f"2 ^ {i} is {x:4}")
+    print(f"2 ^ {i:<2} is {x:>4}")
