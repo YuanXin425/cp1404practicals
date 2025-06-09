@@ -9,22 +9,23 @@ FILENAME = "subject_data.txt"
 def main():
     data = load_data()
     print(data)
-
+    print("----------")
+    display_subject(data)
 
 def load_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
     data = []
-    with open(FILENAME, 'r') as input_file:
-         for line in input_file:
-             line = line.strip()  # Remove the \n
-             if line:
-                 parts = line.split(',') # Separate the data into its parts
-                 subject = parts[0]
-                 lecturer = parts[1]
-                 number_of_students = int(parts[2])
-                 data.append([subject, lecturer, number_of_students])
+    input_file = open(FILENAME)
+    for line in input_file:
+        line = line.strip() # Remove the \n
+        parts = line.split(',') # Separate the data into its parts
+        parts[2] = int(parts[2]) # Make the number an integer (ignore PyCharm's warning)
+        data.append(parts)
     return data
 
-print("----------")
+def display_subject(data):
+    """Present subject details in a single sentence."""
+    for subject in data:
+        print(f"{subject[0]} is taught by {subject[1]} and has {subject[2]} students")
 
 main()
