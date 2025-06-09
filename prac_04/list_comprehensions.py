@@ -30,7 +30,7 @@ print(a_names)
 print(" ".join(sorted(names)))
 
 # TODO: list comprehension to create a list of all the full_names in lowercase format
-lowercase_full_names = full_names.str.lower()
+lowercase_full_names = [name.lower() for name in full_names]
 print(lowercase_full_names)
 
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
