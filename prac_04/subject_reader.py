@@ -13,14 +13,18 @@ def main():
 
 def load_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
+    data = []
     with open(FILENAME, 'r') as input_file:
          for line in input_file:
              line = line.strip()  # Remove the \n
              if line:
                  parts = line.split(',') # Separate the data into its parts
-                 parts = [parts[0], parts[1]], int(parts[2])]
-                 input_file.append(parts)
-    return input_file
+                 subject = parts[0]
+                 lecturer = parts[1]
+                 number_of_students = int(parts[2])
+                 data.append([subject, lecturer, number_of_students])
+    return data
+
 print("----------")
 
 main()
