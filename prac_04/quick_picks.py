@@ -1,23 +1,27 @@
 import random
 
-def main():
-    """Get user's number of quick picks."""
-    picks = int(input("How many quick picks?"))
-    # Print the number of lines based on user's input
-    for i in range(picks):
-        print(random_numbers())
+# CONSTANTS for each value
+MIN_NUMBER = 1
+MAX_NUMBER = 45
+NUMBERS_PER_PICKS = 6
 
-def random_numbers():
-    """Generate random numbers in ascending order."""
-    numbers = []
-    while len(numbers) < 6:
-        num = random.randint(1,45)
-        # Ensures no repetition of numbers
-        if num not in numbers:
-            numbers.append(num)
-    # Sorts the numbers in ascending order before returning
-    numbers.sort()
-    return ' '.join(f"{num:2}" for num in numbers)
+def main():
+    """Get user's number of picks."""
+    picks = int(input("How many quick picks?"))
+
+    # Generate random numbers between 1(minimum) and 45(maximum)
+    for i in range(picks):
+        random_numbers = []
+        for num in range(NUMBERS_PER_PICKS):
+            num = random.randint(MIN_NUMBER, MAX_NUMBER)
+            # Ensures no repetition of numbers per pick
+            while num in random_numbers:
+                num = random.randint(MIN_NUMBER, MAX_NUMBER)
+            random_numbers.append(num)
+        # Sorts the numbers in ascending order
+        random_numbers.sort()
+        # list to string
+        print(' '.join(f"{num:2}" for num in random_numbers))
 
 main()
 
