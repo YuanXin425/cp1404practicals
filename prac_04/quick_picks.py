@@ -13,7 +13,7 @@ def random_numbers():
     """Generate random numbers in ascending order."""
     numbers = [random.randint(1,45) for _ in range(6)]
     numbers.sort()
-    print(numbers)
+    return numbers
 
 main()
 
