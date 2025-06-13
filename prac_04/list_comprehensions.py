@@ -41,8 +41,8 @@ print(numbers)
 
 # TODO: list comprehension to create a list of only the numbers that are
 # greater than 9 from the numbers (not strings) you just created
-greater_than = [greater_than for greater_than in numbers if greater_than > 9]
-print(greater_than)
+greater_numbers = [greater_numbers for greater_numbers in numbers if greater_numbers > 9]
+print(greater_numbers)
 
 # TODO: (more advanced) use a list comprehension and the join string method
 # to create a string (not list) of the last names for those full names longer than 11 characters
