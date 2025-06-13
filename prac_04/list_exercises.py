@@ -3,7 +3,7 @@
 numbers = []
 # Get user's 5 numbers.
 for i in range(5):
-    number = int(input("Number:"))
+    number = int(input("Number: "))
     numbers.append(number) # Add each number to the list.
 
 print(f"The first number is {numbers[0]}")
