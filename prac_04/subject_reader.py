@@ -21,6 +21,7 @@ def load_data():
         parts = line.split(',') # Separate the data into its parts
         parts[2] = int(parts[2]) # Make the number an integer (ignore PyCharm's warning)
         data.append(parts)
+    input_file.close()
     return data
 
 def display_subject(data):
