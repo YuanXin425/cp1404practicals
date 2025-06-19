@@ -11,7 +11,7 @@ def main():
     """Read wimbledon data, process it and display the results."""
     data = read_data(FILENAME)
     champions_to_wins = count_champion_wins(data)
-    countries = sort_countries_win(data)
+    countries = sort_countries_that_win(data)
     display_results(champions_to_wins, countries)
 
 def read_data(filename):
@@ -41,7 +41,7 @@ def count_champion_wins(data):
         champions_to_wins[champion] = champions_to_wins.get(champion, 0) + 1
     return champions_to_wins
 
-def sort_countries_win(data):
+def sort_countries_that_win(data):
     """Sort a list of country that have won the wimbledon."""
     # Use set to avoid duplicates
     countries = set()
