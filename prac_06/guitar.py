@@ -1,0 +1,28 @@
+"""
+Guitar
+Estimate: 1 hour
+Actual:   1 hour 15 minutes
+"""
+
+class Guitar:
+    """Represent a Guitar object."""
+
+    def __init__(self, name="", year=0, cost=0):
+        """Initialize a Guitar instance."""
+        self.name = name
+        self.year = year
+        self.cost = cost
+
+    def __str__(self):
+        """Print the guitar details."""
+        return f"{self.name} ({self.year}) : ${self.cost}"
+
+    def get_age(self):
+        """Get the age of the guitar."""
+        current_year = 2022
+        return current_year - self.year
+
+    def is_vintage(self):
+        """Determine if the guitar is vintage."""
+        return self.get_age() >= 50
+
