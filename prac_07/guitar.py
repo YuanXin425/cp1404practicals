@@ -9,7 +9,7 @@ class Guitar:
 
     def __str__(self):
         """Print the guitar details."""
-        return f"{self.name} ({self.year}) : ${self.cost}"
+        return f"{self.name} ({self.year}) : ${self.cost:.2f}"
 
     def __lt__(self, other):
         """Compare Guitars by year in order to sort the list by year from the oldest guitar to the newest guitar."""
